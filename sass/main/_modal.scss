@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  
+
   opacity: 1;
   transition: opacity 250ms $cubic;
 
@@ -21,10 +21,10 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+
   padding: 40px;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
 
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms $cubic;
@@ -32,6 +32,10 @@
   box-shadow: $box-shadow--card-set;
   border-radius: 4px;
   background-color: $white-color;
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 }
 .cloce-modal {
   position: absolute;
@@ -142,14 +146,23 @@
 .checkbox__field {
   display: block;
   position: relative;
-  text-align: center;
+  padding-left: 25px;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 40px;
+  }
 }
 .checkbox__label {
-  margin-left: 10px;
-  font-size: 14px;
+  display: block;
+  
+  font-size: 12px;
   line-height: 1.71;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 .checkbox__link {
   position: relative;
@@ -167,8 +180,8 @@
 }
 .checkbox__icon {
   position: absolute;
-  top: 50%;
-  left: 15px;
+  top: 45%;
+  left: 0;
   transform: translateY(-50%);
 
   transition: background-color 250ms $cubic, border-color 250ms $cubic;
@@ -179,29 +192,34 @@
     background-color: $accent-color;
     border-color: $accent-color;
   }
+
+  @media screen and (min-width: 1200px) {
+    left: 15px;
+  }
 }
 .call-back__submit {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 10px 28px;
-    min-width: 200px;
-  
-    transition: background-color 250ms $cubic;
-  
-    border-radius: 4px;
-    border: none;
-    cursor: pointer;
-    box-shadow: $box-shadow-button;
-    background-color: $accent-color;
-  
-    color: $white-color;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.06em;
-    &:hover, &:focus {
-      background-color: $button-acent-color;
-    }
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 28px;
+  min-width: 200px;
+
+  transition: background-color 250ms $cubic;
+
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  box-shadow: $box-shadow-button;
+  background-color: $accent-color;
+
+  color: $white-color;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  &:hover,
+  &:focus {
+    background-color: $button-acent-color;
+  }
 }

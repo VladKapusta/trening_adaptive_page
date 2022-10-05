@@ -32,7 +32,7 @@ body {
   margin: -1px;
 }
 
-.container-footer, .container-exsemples, .container-header {
+.container-exsemples {
   margin: 0 auto;
   padding: 0 15px;
   width: 1200px;
@@ -53,27 +53,26 @@ body {
   padding-bottom: 94px;
 }
 
-.header {
-  border-bottom: 1px solid #ECECEC;
-}
-
 .container-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  text-align: center;
+  outline: 1px solid red;
+  padding: 15px 16px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-.nav-page {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+@media screen and (min-width: 480px) {
+  .container-header {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container-header {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container-header {
+    width: 1200px;
+  }
 }
 
 .logo {
@@ -88,17 +87,6 @@ body {
 }
 .logo__right--revers {
   color: #FFFFFF;
-}
-
-.nav-page__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 93px;
-}
-
-.nav-page__item:not(:last-child) {
-  margin-right: 53px;
 }
 
 .nav-page__link {
@@ -296,16 +284,18 @@ body {
 }
 
 .container-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  width: 480px;
+  padding: 0 15px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.address-contain {
+  margin-bottom: 60px;
 }
 
 .address {
-  width: 215px;
+  display: block;
   margin-top: 20px;
   font-style: normal;
 }
@@ -336,7 +326,7 @@ body {
 }
 
 .sotial-studio {
-  margin-left: 82px;
+  margin-bottom: 60px;
 }
 
 .sotial-studio__titel {
@@ -388,10 +378,6 @@ body {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.subscrib__form {
-  margin-left: 93px;
-}
-
 .subscrib__titel {
   margin-top: 0;
   margin-bottom: 20px;
@@ -403,9 +389,10 @@ body {
 }
 
 .subscrib__lebel {
-  display: inline-block;
-  width: 358px;
+  display: block;
+  width: 100%;
   margin-right: 12px;
+  margin-bottom: 20px;
 }
 
 .subscrib__input {

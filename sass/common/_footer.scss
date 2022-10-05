@@ -1,15 +1,32 @@
 .footer {
-  padding: 60px 0;
-
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $bg-footer-color;
 }
-.container-footer {
-  @extend %container;
-  display: flex;
-  align-items: baseline;
+.footer-content {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  @media screen and (max-width:1199px) {
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    justify-content: space-between;
+  }
+}
+.address-contain {
+  @media screen and (max-width:767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  }
 }
 .address {
-  width: 215px;
+  display: block;
   margin-top: 20px;
 
   font-style: normal;
@@ -45,7 +62,11 @@
 }
 
 .sotial-studio {
-  margin-left: 82px;
+  @media screen and (max-width:767px) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  }
 }
 .sotial-studio__titel {
   margin-top: 0;
@@ -58,10 +79,12 @@
   text-transform: uppercase;
 }
 
-@import '../common/sotial-list';
+
 
 .subscrib__form {
-  margin-left: 93px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-top: 60px;
+  }
 }
 .subscrib__titel {
   margin-top: 0;
@@ -74,10 +97,21 @@
   text-transform: uppercase;
 }
 .subscrib__lebel {
-    display: inline-block;
-    width: 358px;
-    margin-right: 12px;
-    
+  display: block;
+
+    @media screen and (max-width: 767px) {
+      max-width: 450px;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: 450px;
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1200px) {
+      display: inline-block;
+      width: 358px;   
+      margin-right: 12px;   
+    }
 }
 .subscrib__input {
   padding: 15px 16px;

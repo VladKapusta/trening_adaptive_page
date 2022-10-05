@@ -1,30 +1,49 @@
 .hero {
-  display: block;
-  max-width: 1600px;
-  height: 600px;
-  margin: 0 auto;
-  padding: 200px 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 118px 0;
+  height: 400px;
 
   text-align: center;
 
   background-image: linear-gradient(to right, $hero-gradient, $hero-gradient),
     url(../images/herobg.jpg);
-    background-position: center;
-    background-size: cover;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+    
+  }
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 200px 0;
+    max-width: 1600px;
+    height: 600px;
+  }
 }
 .hero__titel {
   margin-top: 0;
   margin-bottom: 30px;
-  margin-left: auto;
   margin-right: auto;
-  max-width: 700px;
+  margin-left: auto;
 
   color: $white-color;
   font-weight: 900;
-  font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  @media screen and (max-width: 1199px) {
+    width: 360px;
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 700px;
+    font-size: 44px;
+  }
 }
 .button {
   padding: 10px 32px;
@@ -43,7 +62,8 @@
   font-size: 16px;
   line-height: 1.88;
   letter-spacing: 0.06em;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     background-color: $button-acent-color;
   }
 }

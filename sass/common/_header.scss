@@ -1,16 +1,37 @@
 .header {
-    border-bottom: 1px solid $border-header-color;
+  border-bottom: 1px solid $border-header-color;
 }
-.container-header {
-  @extend %container;
-
+.head {
   display: flex;
   justify-content: space-between;
-  text-align: center;
-}
-.nav-page {
-  display: flex;
   align-items: center;
+
+  @media screen and (max-width: 767px) {
+    position: relative;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.btn-menu {
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+  
+    cursor: pointer;
+    border: none;
+    background: $white-color;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.content-nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
 }
 .logo {
   @extend %link;
@@ -23,12 +44,15 @@
   &__right {
     color: $bleack-color;
     &--revers {
-      color: $white-color
+      color: $white-color;
     }
   }
 }
+.nav-page {
+  display: flex;
+  align-items: center;
+}
 .nav-page__list {
-  @extend %list;
   display: flex;
 
   margin-left: 93px;
@@ -37,7 +61,6 @@
   margin-right: 53px;
 }
 .nav-page__link {
-  @extend %link;
   display: inline-block;
   padding-top: 32px;
   padding-bottom: 32px;
@@ -49,7 +72,8 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $accent-color;
   }
 }
@@ -88,7 +112,8 @@
   &:not(:last-child) {
     margin-right: 30px;
   }
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $accent-color;
     fill: $accent-color;
   }
